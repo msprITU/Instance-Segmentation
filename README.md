@@ -1,2 +1,2 @@
-# Instance-Segmantation
-This is a repository for the Instance Segmantation Page.
+# Instance-Segmentation
+This is a repository for the Instance Segmentation Page.
