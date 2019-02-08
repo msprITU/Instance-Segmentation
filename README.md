@@ -3,13 +3,12 @@
 We constructed a dataset for instance segmentation tasks. We segmented Pascal VOC 2012 dataset. In our dataset, there are 1454 images and 2695 face instances. In other words, our dataset contains 2667 face instances with their localization, classification and segmentation information. In the following figures, you may observe a frame and segmentation of face object.
 
 
-![Image](https://raw.githubusercontent.com/cakirogluozan/test/master/MSPRtrain2014_000000600000.jpg)
-![Segmentation](https://github.com/cakirogluozan/test/blob/master/000001_mask_0.png?raw=true)
-
+| ![Image](processed-Data/Images/MSPRtrain2014_000000600000.jpg)  |  ![Segmentation](processed-Data/processed_masks/000001_mask_0.png) |
+| --- | --- |
 
 The dataset can be accessed through [this link.]() 
 
-In the directory, there are three folders which are Annotation, Images and processedMasks. Images and processedMasks are the directories of frames and segmentation masks, respectively. However, in the model we performed, in Mask R-CNN, segmentation, area, category_id, image_id, bbox and iscrowd parameters should be written in JSON file.
+In the directory, there are three folders which are [Annotation](processed-Data/Annotations/), [Images](processed-Data/Images/) and [processedMasks](processed-Data/processed_masks/). Images and processedMasks are the directories of frames and segmentation masks, respectively. However, in the model we performed, in Mask R-CNN, segmentation, area, category_id, image_id, bbox and iscrowd parameters should be written in JSON file.
 
 
 ### Parameters in JSON file
@@ -37,7 +36,7 @@ We performed our dataset creation by using LabelMe Annotation Tool [Label]. Labe
 
 We will explain how to create a Microsoft COCO-like dataset and how to train Mask R-CNN with a custom dataset. Firstly, instances should be annotated with the tool. 
 
-We wrote a routine for converting LabelMe outputs into proper representation for training Mask R-CNN. After downloading all the outputs, they should be organized as in ./source directory. There should be Annotations/, Images/ and Masks/ folders. After this preparation, the routine can be run.
+We wrote a [routine](Routine/dataset_creator.py) for converting LabelMe outputs into proper representation for training Mask R-CNN. After downloading all the outputs, they should be organized as in ./source directory. There should be Annotations/, Images/ and Masks/ folders. After this preparation, the routine can be run.
 
     python3 dataset_creator.py --source [source] --destination [destination] --objective [objective] --objects [objects]
 
