@@ -1,4 +1,4 @@
-# Instance-Segmentation
+# Instance Segmentation
 <!-- # MSPR ITU Dataset - Face Segmentation --->
 We constructed a dataset for instance segmentation tasks. We segmented Pascal VOC 2012 dataset. In our dataset, there are 1454 images and 2695 face instances. In other words, our dataset contains 2667 face instances with their localization, classification and segmentation information. In the following figures, you may observe a frame and segmentation of face object.
 
