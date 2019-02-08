@@ -31,21 +31,22 @@ In the directory, there are three folders which are [Annotation](processed-Data/
 We performed our dataset creation by using [LabelMe Annotation Tool](http://labelme.csail.mit.edu/Release3.0/). LabelMe Annotation Tool is a semi-automatic segmentation tool can be used through a browser. The method performs scene recognition at backend. Even though there are many tools for semi-automatic segmentation, we performed LabelMe since we concluded that it has a high performance in efficient time cost.
 
 ### Requirements
-
-        pip install json, cv2, xml, skimage, pycocotools, scipy, skimate, skimage, urlib
-
+```
+pip install json, cv2, xml, skimage, pycocotools, scipy, skimate, skimage, urlib
+```
 We will explain how to create a Microsoft COCO-like dataset and how to train Mask R-CNN with a custom dataset. Firstly, instances should be annotated with the tool. 
 
 We wrote a [routine](Routine/dataset_creator.py) for converting LabelMe outputs into proper representation for training Mask R-CNN. After downloading all the outputs, they should be organized as in [./source](/Source) directory. There should be [Annotations/](/Source/Annotations), [Images/](/Source/Images) and [Masks/](/Source/Masks) folders. After this preparation, the routine can be run.
 
-    python3 dataset_creator.py --source [source] --destination [destination] --objective [objective] --objects [objects]
-
+```
+python3 dataset_creator.py --source [source] --destination [destination] --objective [objective] --objects [objects]
+```
 where;
 
-    --source argument is the directory of LabelMe Annotation Tool outputs.
-    --destination argument is the directory of the routine's outputs.
-    --objective argument is selection of usage of data, either 'train' or 'val'
-    --objects argument is a string of objects splitted with a comma, 'obj1,obj2,obj3'
+* "source" argument is the directory of LabelMe Annotation Tool outputs.
+* "destination" argument is the directory of the routine's outputs.
+* "objective" argument is selection of usage of data, either 'train' or 'val'
+* "objects" argument is a string of objects splitted with a comma, 'obj1,obj2,obj3'
 
 ### Functionality of Routine
 
