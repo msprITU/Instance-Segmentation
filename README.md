@@ -36,7 +36,7 @@ pip install json, cv2, xml, skimage, pycocotools, scipy, skimate, skimage, urlib
 ```
 We will explain how to create a Microsoft COCO-like dataset and how to train Mask R-CNN with a custom dataset. Firstly, instances should be annotated with the tool. 
 
-We wrote a [routine](Routine/dataset_creator.py) for converting LabelMe outputs into proper representation for training Mask R-CNN. After downloading all the outputs, they should be organized as in [/source](/Routine/Source) directory. There should be [/Annotations](/Routine/Source/Annotations), [/Images](/Routine/Source/Images) and [/Masks](/Routine/Source/Masks) folders. After this preparation, the routine can be run.
+We wrote a [routine](Routine/dataset_creator.py) for converting LabelMe outputs into proper representation for training Mask R-CNN. After downloading all the outputs, they should be organized as in [./source](/Routine/Source) directory. There should be [/Annotations](/Routine/Source/Annotations), [/Images](/Routine/Source/Images) and [/Masks](/Routine/Source/Masks) folders. After this preparation, the routine can be run.
 
 ```
 python3 dataset_creator.py --source [source] --destination [destination] --objective [objective] --objects [objects]
