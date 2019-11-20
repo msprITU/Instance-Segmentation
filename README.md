@@ -3,7 +3,7 @@
 We constructed a dataset for instance segmentation tasks. We segmented Pascal VOC 2012 dataset. In our dataset, there are 1454 images and 2695 face instances. In other words, our dataset contains 2667 face instances with their localization, classification and segmentation information. In the following figures, you may observe a frame and segmentation of face object.
 
 
-| ![Image](processed-Data/Images/MSPRtrain2014_000000600000.jpg)  |  ![Segmentation](processed-Data/processed_masks/000001_mask_0.png) |
+| ![Image](siu2019/Images/000001.jpg)  |  ![Segmentation](siu2019/Masks_GT/000001_mask_0.png) |
 | --- | --- |
 
 The dataset can be accessed through [this link.](/processed-Data) 
